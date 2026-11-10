@@ -1,0 +1,10 @@
+title "Derailleur Gear Shift Clack"
+type sfx
+bpm 150
+time 4/4
+
+inst mech  preset=sword_clash vol=0.28 adsr=0.001,0.035,0.05,0.035
+inst latch wave=square duty=0.25 vol=0.22 adsr=0.001,0.025,0.0,0.020
+
+track clack mech:  680Hz->310Hz:45ms R:15ms 920Hz->460Hz:55ms
+track snap  latch: 420Hz->220Hz:40ms R:20ms 580Hz->840Hz:50ms

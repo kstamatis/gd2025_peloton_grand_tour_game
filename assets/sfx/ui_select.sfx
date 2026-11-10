@@ -1,0 +1,3 @@
+title "UI Cursor Select"
+type sfx
+step preset=ui_select dur=55ms

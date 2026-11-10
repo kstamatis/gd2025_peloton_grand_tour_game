@@ -1,0 +1,9 @@
+# Compiled binaries & WebAssembly output
+/server
+/game
+/public/game.wasm
+/public/wasm_exec.js
+
+# OS & editor files
+.DS_Store
+*.swp

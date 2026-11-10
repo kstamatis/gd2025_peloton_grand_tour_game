@@ -1,0 +1,11 @@
+title "cyclist_raw_grid"
+type sprite
+sheet "cyclist_pro.png"
+size 256x256
+grid 4x4
+
+tag idle       0..3 100ms pingpong
+tag cruise     0..3 90ms loop
+tag sprint     4..7 75ms loop
+tag tuck       8..11 90ms loop
+tag victory    12..15 110ms pingpong

@@ -1,0 +1,10 @@
+title "Energy Gel Hydration Pickup"
+type sfx
+bpm 150
+time 4/4
+
+inst coin preset=coin_pickup vol=0.30
+inst gem  preset=gem_shimmer vol=0.24 pan=0.20
+
+track main    coin: B5:75ms E6:210ms
+track sparkle gem:  R:35ms G#6:240ms

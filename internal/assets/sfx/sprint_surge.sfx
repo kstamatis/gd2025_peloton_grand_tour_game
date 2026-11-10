@@ -1,0 +1,12 @@
+title "Aero Sprint Surge Boost"
+type sfx
+bpm 150
+time 4/4
+
+inst surge preset=jump_arcade duty=0.50->0.15 vol=0.30 adsr=0.004,0.14,0.40,0.14 lpf=900->3800 q=1.8
+inst jet   wave=psg_noise vol=0.22 adsr=0.010,0.12,0.30,0.15 lpf=1800->450 q=1.5
+inst sub   wave=sine vol=0.26 adsr=0.003,0.12,0.25,0.12
+
+track lead surge: 220Hz->880Hz:280ms
+track rush jet:   440Hz->180Hz:280ms
+track bass sub:   110Hz->220Hz:280ms

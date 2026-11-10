@@ -1,0 +1,10 @@
+title "Freewheel Ratchet Click"
+type sfx
+bpm 160
+time 4/4
+
+inst click wave=fm mod_ratio=3.1415 mod_index=3.5->0.2 vol=0.26 adsr=0.001,0.018,0.0,0.012 hpf=1200
+inst body  wave=triangle vol=0.18 adsr=0.001,0.015,0.0,0.010
+
+track ratchet click: 1450Hz->680Hz:28ms R:32ms 1520Hz->710Hz:28ms R:32ms 1480Hz->690Hz:28ms
+track thump   body:  320Hz->140Hz:24ms  R:36ms 340Hz->150Hz:24ms  R:36ms 330Hz->145Hz:24ms

@@ -1,0 +1,4 @@
+title "UI Confirm Action"
+type sfx
+inst chime preset=ui_confirm vol=0.30
+track main chime: E5:65ms B5:145ms

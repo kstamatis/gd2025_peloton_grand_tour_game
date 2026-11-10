@@ -1,0 +1,26 @@
+//go:build ignore
+
+//kage:unit pixels
+
+package main
+
+var ScreenSize vec2
+var Intensity float // [0.0, 1.0] sprint / effort intensity
+var Time float      // Elapsed seconds
+var TintColor vec3  // Unpremultiplied RGB in [0.0, 1.0]
+
+func Fragment(dstPos vec4, srcPos vec2, color vec4) vec4 {
+	origin := imageDstOrigin()
+	uv := (dstPos.xy - origin) / ScreenSize
+	centered := uv*2.0 - vec2(1.0, 1.0)
+	dist := length(centered)
+
+	// Radial edge vignette that intensifies during Aero Sprint or Red-Zone effort
+	edge := smoothstep(0.68, 1.32, dist)
+	angle := atan2(centered.y, centered.x)
+	streaks := 0.5 + 0.5*sin(angle*36.0+Time*28.0)
+	alpha := clamp(edge*Intensity*(0.35+0.45*streaks), 0.0, 0.65)
+
+	// Premultiplied alpha output: RGB = TintColor * alpha
+	return vec4(TintColor*alpha, alpha)
+}

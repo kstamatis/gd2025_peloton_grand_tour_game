@@ -1,0 +1,30 @@
+title "Pave Cobblestone Hazard"
+type sprite
+size 64x64
+fps 8
+palette ember
+outline #1A0B0E
+light -0.4,-0.8
+
+part base ramp=obsidian z=0 pivot=32,36 dither=bayer2
+  box 32,36 24,14 r=5.0
+
+part stones ramp=steel z=2 pivot=32,36
+  box 18,30 6,4 r=2.0
+  box 32,29 7,4 r=2.0
+  box 46,31 5,4 r=2.0
+  box 23,40 7,4.5 r=2.0
+  box 39,40 7,4.5 r=2.0
+
+part hazard_stripe ramp=gold z=4 pivot=32,22
+  box 22,20 4,2 r=0.5
+  box 32,20 4,2 r=0.5
+  box 42,20 4,2 r=0.5
+
+part dust ramp=bone z=5 pivot=32,30
+  circle 16,25 r=2.5
+  circle 48,26 r=2.0
+
+tag idle frames=4 loop=loop
+  pose hazard_stripe dy=sin(1.0)
+  pose dust dy=sin(2.0) dx=cos(1.5)

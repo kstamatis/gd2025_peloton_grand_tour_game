@@ -1,0 +1,10 @@
+title "Pave Cobblestone Rattle"
+type sfx
+bpm 140
+time 4/4
+
+inst stone preset=footstep_stone vol=0.32 adsr=0.001,0.045,0.10,0.045
+inst thud  preset=hit_punch vol=0.28 adsr=0.002,0.055,0.05,0.050
+
+track grit stone: 240Hz->90Hz:70ms R:20ms 210Hz->80Hz:75ms
+track bump thud:  140Hz->42Hz:70ms R:20ms 125Hz->38Hz:75ms
